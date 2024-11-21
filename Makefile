@@ -301,7 +301,7 @@ ifneq ($(findstring armlink,$(notdir $(LD))),)
 TF_LDFLAGS		+=	--diag_error=warning --lto_level=O1
 TF_LDFLAGS		+=	--remove --info=unused,unusedsymbols
 else
-TF_LDFLAGS		+=	--fatal-warnings -O1
+TF_LDFLAGS		+=	-O1
 TF_LDFLAGS		+=	--gc-sections
 endif
 TF_LDFLAGS		+=	$(TF_LDFLAGS_$(ARCH))
